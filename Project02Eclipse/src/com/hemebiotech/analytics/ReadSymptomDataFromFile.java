@@ -1,13 +1,15 @@
 package com.hemebiotech.analytics;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Simple brute force implementation
+ * 
+ * @author Senhaji Houda
  *
  */
 public class ReadSymptomDataFromFile implements ISymptomReader {
@@ -15,7 +17,7 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 	private String filepath;
 	
 	/**
-	 * 
+	 * read the symptoms'file and put the content into a list
 	 * @param filepath a full or partial path to file with symptom strings in it, one per line
 	 */
 	public ReadSymptomDataFromFile (String filepath) {
@@ -36,9 +38,16 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 					line = reader.readLine();
 				}
 				reader.close();
-			} catch (IOException e) {
-				e.printStackTrace();
+			} catch (FileNotFoundException exception) {
+				System.out.println(" Symptome's file doesn't exite ");
 			}
+			
+						
+			  catch (IOException exception) {
+				exception.printStackTrace();				
+			//	System.out.println(" On a plus acces au fichier des symptomes ");
+			}
+			
 		}
 		
 		return result;
