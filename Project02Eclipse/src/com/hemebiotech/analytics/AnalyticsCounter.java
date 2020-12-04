@@ -7,13 +7,11 @@ public class AnalyticsCounter {
 	
 	
 	    public static void main(String args[]) throws Exception {
-		//public static void main(String args[])  {
 	
 		
 		ReadSymptomDataFromFile reader  = new ReadSymptomDataFromFile("Project02Eclipse\\\\symptoms.txt");
 		List2TreemapConversion listconv = new List2TreemapConversion();
 		WriteSymptomToFile writer = new WriteSymptomToFile();
-		//TreeMap<String, Integer> map = new TreeMap<String, Integer>();
 		
 		//lit le fichier symptoms.txt et stock les symptomes dans une liste
 		List<String> result = reader.GetSymptoms();
