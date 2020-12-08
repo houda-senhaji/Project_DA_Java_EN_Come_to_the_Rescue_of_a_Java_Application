@@ -17,7 +17,7 @@ public class List2TreemapConversion {
 	 * @return the treeMap, the key is the symptom and the value is the number of occurences  
 	 */
 	
-	public TreeMap<String, Integer> List2Treemap (List<String> inputlist) {
+	public TreeMap<String, Integer> list2Treemap (List<String> inputlist) {
 			
 			TreeMap<String, Integer> map = new TreeMap<String, Integer>();
 

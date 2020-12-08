@@ -14,11 +14,11 @@ public class AnalyticsCounter {
 		WriteSymptomToFile writer = new WriteSymptomToFile();
 		
 		//lit le fichier symptoms.txt et stock les symptomes dans une liste
-		List<String> result = reader.GetSymptoms();
+		List<String> result = reader.getSymptoms();
 		//convertie la liste en TreeMap ordonnée avec pour chaque symptome son nombre d'occurence
-		TreeMap<String, Integer> map = listconv.List2Treemap (result);
+		TreeMap<String, Integer> map = listconv.list2Treemap (result);
 		// genere le fichier result.out à partir de la TreeMap
-		writer.GenerateSymptomFile(map);
+		writer.generateSymptomFile(map);
 							
 	}
 }

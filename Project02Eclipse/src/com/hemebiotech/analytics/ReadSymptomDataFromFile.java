@@ -25,7 +25,7 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 	}
 	
 	@Override
-	public List<String> GetSymptoms() {
+	public List<String> getSymptoms() {
 		ArrayList<String> result = new ArrayList<String>();
 		
 		if (filepath != null) {
@@ -45,7 +45,7 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 						
 			  catch (IOException exception) {
 				exception.printStackTrace();				
-			//	System.out.println(" On a plus acces au fichier des symptomes ");
+			
 			}
 			
 		}
